@@ -19,7 +19,7 @@ class NoteResponseModel {
           title: item['title'],
           description: item['description'],
           createdAt: DateTime.tryParse(item['createdAt']),
-          updatedAt: DateTime.tryParse(item['updatedAt']),
+          updatedAt: item['updatedAt'] != null ? DateTime.tryParse(item['updatedAt']) : null,
       )).toList(),
       error: json['error'],
       message: json['message'],
