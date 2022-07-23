@@ -2,11 +2,11 @@
 import 'note_model.dart';
 
 class NoteResponseModel {
-  List results;
-  bool error;
-  String message;
+  final List<NoteModel> results;
+  final bool error;
+  final String message;
 
-   NoteResponseModel({
+   const NoteResponseModel({
     required this.results,
     required this.error,
     required this.message
